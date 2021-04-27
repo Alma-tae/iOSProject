@@ -75,6 +75,30 @@ class PlayerTableViewController: UITableViewController {
         }
             return "ㅎ"
     }
+    
+    //검색과 관련된 프로퍼티
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredPlayers:Array<String> = []
+    
+    //검색 입력 란이 비어있는지 확인하는 함수
+    func searchBarIsEmpty() -> Bool{
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    //검색 입력란에 용을 입력하면 호출되는 메소드
+    //테이블 뷰를 재출력
+    func filterContentForSearchText(_ searchText:String, scope:String = "All"){
+        //데이터를 조회해서 검색 입력란에 입력한 데이터를 포함하고 있으면
+        //모아서 filteredPlayers에 대입
+        //맵 - 변환, 필터 - 골라냄
+        filteredPlayers = data.filter({(player:String) -> Bool in return player.lowercased().contains(searchText.lowercased())})
+        tableView.reloadData()
+    }
+    
+    //검색 입력 란의 상태를 리턴하느 메서드
+    func isFiltering() -> Bool{
+        return searchController.isActive && !searchBarIsEmpty()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -188,20 +212,35 @@ class PlayerTableViewController: UITableViewController {
             
             i = i + 1
         }
-        
-        
+        //검색 바의 옵션을 설정하고 배치
+        //서치 바의 내용이 변경되었을 때, 호출돌 메서드의 위치를 설정
+        searchController.searchResultsUpdater = self
+        //배경에 대한 옵셜 설정
+        searchController.obscuresBackgroundDuringPresentation = false
+        //처음 보이는 문자열 설정
+        searchController.searchBar.placeholder = "검색어를 입력하세요."
+        //검색바 배치
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
 
     // MARK: - Table view data source
 
     //섹션의 개수를 설정하는 메서드
     override func numberOfSections(in tableView: UITableView) -> Int {
+        //검색바가 활성화된 경우는 섹션의 개수를 1개로 설정
+        if isFiltering(){
+            return 1
+        }
         return sectionData.count
     }
     
     //섹션의 헤더를 만들어주는 메서드
     //헤어데 자음을 출력
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if isFiltering(){
+            return "검색 결과"
+        }
         //섹션 번호로 디셔너리를 찾아옴
         let dic = sectionData[section]
         //디셔너리에서 section_name의 값을 가져옴
@@ -212,6 +251,11 @@ class PlayerTableViewController: UITableViewController {
 
     //섹션 별로 행의 개수를 설정하는 메서드
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //검색 바가 활성화된 경우에는 검색 결과의 개수만큼 행을 생성
+        if isFiltering(){
+            return filteredPlayers.count
+        }
+        
         //섹션 번호에 해당하는 데이터를 찾아옴
         let dic = sectionData[section]
         //배열 데이터를 찾아와서 개수를 리턴합니다.
@@ -226,6 +270,12 @@ class PlayerTableViewController: UITableViewController {
 
         if cell == nil{
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        } //Configure the cell...
+        
+        //검색바가 활성화되었을 때 출력
+        if isFiltering(){
+            cell?.textLabel?.text = filteredPlayers[indexPath.row]
+            return cell!
         }
 
         //섹션 번호를 이용해서 Dictionary를 찾고
@@ -241,50 +291,33 @@ class PlayerTableViewController: UITableViewController {
         return cell!
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    //인덱스를 만들어주는 메소드 재정의
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return indexes
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    //인덱스를 눌렀을 때 누른 인덱스의 섹션으로 이동하는 메서드 재정의
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        //누른 인덱스의 섹션 인덱스를 찾아오기
+        for i in 0 ..< sectionData.count{
+            let dic = sectionData[i]
+            //저장된 sectionName을 찾아오기
+            let sectionName = dic["section_name"] as! String
+            if sectionName == title{
+                return i
+            }
+        }
+        //일치하는 데이터가 없다면 특정 영역으로 이동하지 않음
+        return -1
     }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+}
+//검색 바의 내용이 변경될 때 호출될 메서를 소유한 protocol
+extension PlayerTableViewController : UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        //사용자 정의 메소드에 입력한 문자열을 전달
+        filterContentForSearchText(searchController.searchBar.text!)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }
