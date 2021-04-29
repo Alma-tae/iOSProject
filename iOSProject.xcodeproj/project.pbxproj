@@ -137,6 +137,13 @@
 		CD7C77AE263A410C00C19C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7C77AD263A410C00C19C84 /* Assets.xcassets */; };
 		CD7C77B1263A410C00C19C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C77AF263A410C00C19C84 /* LaunchScreen.storyboard */; };
 		CD7C77E7263A426900C19C84 /* MovieListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C77E6263A426900C19C84 /* MovieListVC.swift */; };
+		CD7C7807263A53AB00C19C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7806263A53AB00C19C84 /* AppDelegate.swift */; };
+		CD7C7809263A53AB00C19C84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7808263A53AB00C19C84 /* SceneDelegate.swift */; };
+		CD7C780B263A53AB00C19C84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C780A263A53AB00C19C84 /* ViewController.swift */; };
+		CD7C780E263A53AC00C19C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C780C263A53AC00C19C84 /* Main.storyboard */; };
+		CD7C7810263A53F200C19C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7C780F263A53F200C19C84 /* Assets.xcassets */; };
+		CD7C7813263A53F200C19C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7811263A53F200C19C84 /* LaunchScreen.storyboard */; };
+		CD7C7832263A565800C19C84 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7831263A565800C19C84 /* Downloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -333,6 +340,15 @@
 		CD7C77B0263A410C00C19C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7C77B2263A410D00C19C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7C77E6263A426900C19C84 /* MovieListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListVC.swift; sourceTree = "<group>"; };
+		CD7C7804263A53A900C19C84 /* AsyncDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7C7806263A53AB00C19C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD7C7808263A53AB00C19C84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD7C780A263A53AB00C19C84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD7C780D263A53AC00C19C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD7C780F263A53F200C19C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD7C7812263A53F200C19C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD7C7814263A53F300C19C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7C7831263A565800C19C84 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,6 +520,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD7C7801263A53A900C19C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -622,6 +645,7 @@
 				C47DC5D926392FA500AB0F03 /* WebDataSyncDownload */,
 				C47DC60326394B7D00AB0F03 /* XMLParsing */,
 				CD7C77A3263A3FAE00C19C84 /* JSONParsingUse */,
+				CD7C7805263A53AB00C19C84 /* AsyncDownload */,
 				C4B6869A262FAF3D00EBFA47 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -653,6 +677,7 @@
 				CD7C7721263A3B0B00C19C84 /* JSONParsingUITests.xctest */,
 				CD7C7761263A3CE100C19C84 /* JSONParsingProject.app */,
 				CD7C77A2263A3FAD00C19C84 /* JSONParsingUse.app */,
+				CD7C7804263A53A900C19C84 /* AsyncDownload.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -855,6 +880,21 @@
 				CD7C77E6263A426900C19C84 /* MovieListVC.swift */,
 			);
 			path = JSONParsingUse;
+			sourceTree = "<group>";
+		};
+		CD7C7805263A53AB00C19C84 /* AsyncDownload */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7806263A53AB00C19C84 /* AppDelegate.swift */,
+				CD7C7808263A53AB00C19C84 /* SceneDelegate.swift */,
+				CD7C780A263A53AB00C19C84 /* ViewController.swift */,
+				CD7C780C263A53AC00C19C84 /* Main.storyboard */,
+				CD7C780F263A53F200C19C84 /* Assets.xcassets */,
+				CD7C7811263A53F200C19C84 /* LaunchScreen.storyboard */,
+				CD7C7814263A53F300C19C84 /* Info.plist */,
+				CD7C7831263A565800C19C84 /* Downloader.swift */,
+			);
+			path = AsyncDownload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1270,6 +1310,23 @@
 			productReference = CD7C77A2263A3FAD00C19C84 /* JSONParsingUse.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CD7C7803263A53A900C19C84 /* AsyncDownload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD7C7815263A53F300C19C84 /* Build configuration list for PBXNativeTarget "AsyncDownload" */;
+			buildPhases = (
+				CD7C7800263A53A900C19C84 /* Sources */,
+				CD7C7801263A53A900C19C84 /* Frameworks */,
+				CD7C7802263A53A900C19C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsyncDownload;
+			productName = AsyncDownload;
+			productReference = CD7C7804263A53A900C19C84 /* AsyncDownload.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1354,6 +1411,9 @@
 					CD7C77A1263A3FAD00C19C84 = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					CD7C7803263A53A900C19C84 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 				};
 			};
 			buildConfigurationList = C4B68694262FAF3D00EBFA47 /* Build configuration list for PBXProject "iOSProject" */;
@@ -1393,6 +1453,7 @@
 				CD7C7720263A3B0B00C19C84 /* JSONParsingUITests */,
 				CD7C7760263A3CE100C19C84 /* JSONParsingProject */,
 				CD7C77A1263A3FAD00C19C84 /* JSONParsingUse */,
+				CD7C7803263A53A900C19C84 /* AsyncDownload */,
 			);
 		};
 /* End PBXProject section */
@@ -1620,6 +1681,16 @@
 				CD7C77B1263A410C00C19C84 /* LaunchScreen.storyboard in Resources */,
 				CD7C77AE263A410C00C19C84 /* Assets.xcassets in Resources */,
 				CD7C77AC263A3FB500C19C84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7C7802263A53A900C19C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7C7813263A53F200C19C84 /* LaunchScreen.storyboard in Resources */,
+				CD7C7810263A53F200C19C84 /* Assets.xcassets in Resources */,
+				CD7C780E263A53AC00C19C84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1864,6 +1935,17 @@
 				CD7C77A5263A3FAE00C19C84 /* AppDelegate.swift in Sources */,
 				CD7C77A7263A3FAE00C19C84 /* SceneDelegate.swift in Sources */,
 				CD7C77E7263A426900C19C84 /* MovieListVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7C7800263A53A900C19C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7C780B263A53AB00C19C84 /* ViewController.swift in Sources */,
+				CD7C7807263A53AB00C19C84 /* AppDelegate.swift in Sources */,
+				CD7C7832263A565800C19C84 /* Downloader.swift in Sources */,
+				CD7C7809263A53AB00C19C84 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2183,6 +2265,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD7C77B0263A410C00C19C84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CD7C780C263A53AC00C19C84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7C780D263A53AC00C19C84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD7C7811263A53F200C19C84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7C7812263A53F200C19C84 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3191,6 +3289,42 @@
 			};
 			name = Release;
 		};
+		CD7C7816263A53F300C19C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDownload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = taehuikim0430.gmail.AsyncDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD7C7817263A53F300C19C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsyncDownload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = taehuikim0430.gmail.AsyncDownload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3415,6 +3549,15 @@
 			buildConfigurations = (
 				CD7C77B4263A410D00C19C84 /* Debug */,
 				CD7C77B5263A410D00C19C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD7C7815263A53F300C19C84 /* Build configuration list for PBXNativeTarget "AsyncDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7C7816263A53F300C19C84 /* Debug */,
+				CD7C7817263A53F300C19C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
