@@ -187,6 +187,19 @@
 		CD7C79F3263BE24A00C19C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7C79F2263BE24A00C19C84 /* Assets.xcassets */; };
 		CD7C79F6263BE24A00C19C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C79F4263BE24A00C19C84 /* LaunchScreen.storyboard */; };
 		CD7C7A18263BE5EE00C19C84 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A17263BE5EE00C19C84 /* InputViewController.swift */; };
+		CD7C7A3C263F820600C19C84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A3B263F820600C19C84 /* AppDelegate.swift */; };
+		CD7C7A3E263F820600C19C84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A3D263F820600C19C84 /* SceneDelegate.swift */; };
+		CD7C7A43263F820600C19C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7A41263F820600C19C84 /* Main.storyboard */; };
+		CD7C7A45263F821D00C19C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7A44263F821D00C19C84 /* Assets.xcassets */; };
+		CD7C7A48263F821D00C19C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7A46263F821D00C19C84 /* LaunchScreen.storyboard */; };
+		CD7C7A6B263F837500C19C84 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7C7A6A263F837500C19C84 /* libsqlite3.0.tbd */; };
+		CD7C7A96263F86A900C19C84 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A8E263F86A800C19C84 /* FMDatabase.m */; };
+		CD7C7A97263F86A900C19C84 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A90263F86A900C19C84 /* FMResultSet.m */; };
+		CD7C7A98263F86A900C19C84 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A91263F86A900C19C84 /* FMDatabasePool.m */; };
+		CD7C7A99263F86A900C19C84 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A92263F86A900C19C84 /* FMDatabaseQueue.m */; };
+		CD7C7A9A263F86A900C19C84 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7A95263F86A900C19C84 /* FMDatabaseAdditions.m */; };
+		CD7C7AD6263F8B5500C19C84 /* PhoneBookListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7AD5263F8B5500C19C84 /* PhoneBookListVC.swift */; };
+		CD7C7B12263F9D1000C19C84 /* PhoneBookDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7B11263F9D1000C19C84 /* PhoneBookDAO.swift */; };
 		D35F18C7E1C1F9A23DFFA433 /* Pods_EditTableview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C598FA0DA2076ADA30A687 /* Pods_EditTableview.framework */; };
 		DEC7EF2AFDF8AF034E5CC34A /* Pods_UserDefineCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89030C760B93656945B30979 /* Pods_UserDefineCell.framework */; };
 		E59ACBA5C9060A8D80735E40 /* Pods_XMLParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3642EAFA0AD5A2B23E3D7580 /* Pods_XMLParsing.framework */; };
@@ -491,6 +504,28 @@
 		CD7C79F5263BE24A00C19C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7C79F7263BE24A00C19C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7C7A17263BE5EE00C19C84 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		CD7C7A39263F820600C19C84 /* SQLitePhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLitePhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7C7A3B263F820600C19C84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD7C7A3D263F820600C19C84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD7C7A42263F820600C19C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD7C7A44263F821D00C19C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD7C7A47263F821D00C19C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD7C7A49263F821D00C19C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD7C7A6A263F837500C19C84 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		CD7C7A8A263F86A700C19C84 /* SQLitePhoneBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLitePhoneBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		CD7C7A8B263F86A800C19C84 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		CD7C7A8C263F86A800C19C84 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		CD7C7A8D263F86A800C19C84 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		CD7C7A8E263F86A800C19C84 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		CD7C7A8F263F86A800C19C84 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		CD7C7A90263F86A900C19C84 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		CD7C7A91263F86A900C19C84 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		CD7C7A92263F86A900C19C84 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		CD7C7A93263F86A900C19C84 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		CD7C7A94263F86A900C19C84 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		CD7C7A95263F86A900C19C84 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		CD7C7AD5263F8B5500C19C84 /* PhoneBookListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookListVC.swift; sourceTree = "<group>"; };
+		CD7C7B11263F9D1000C19C84 /* PhoneBookDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookDAO.swift; sourceTree = "<group>"; };
 		CDD47EC4671E0FCCFD050DA9 /* Pods-gesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gesture.debug.xcconfig"; path = "Target Support Files/Pods-gesture/Pods-gesture.debug.xcconfig"; sourceTree = "<group>"; };
 		D359ABDA1A9C7ED2834E3F09 /* Pods_BasicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D531C7F1ED1B6E0EB239ED /* Pods_notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -736,6 +771,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD7C7A36263F820600C19C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7C7A6B263F837500C19C84 /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -803,6 +846,7 @@
 		8A98E6CA8C39049FB9C56BB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD7C7A6A263F837500C19C84 /* libsqlite3.0.tbd */,
 				CD7C79C6263BD48E00C19C84 /* WebKit.framework */,
 				760D7516CB21B678DDD89822 /* Pods_AlamofireTest.framework */,
 				F8F1671429EA2090A29E773E /* Pods_AsyncDownload.framework */,
@@ -954,6 +998,7 @@
 				CD7C7851263A67D100C19C84 /* AlamofireTest */,
 				CD7C78D2263B8CA200C19C84 /* AlamofireMovieList */,
 				CD7C79E8263BE23000C19C84 /* LocalSave */,
+				CD7C7A3A263F820600C19C84 /* SQLitePhoneBook */,
 				C4B6869A262FAF3D00EBFA47 /* Products */,
 				3B8D04F3909D8980C0F2B8C0 /* Pods */,
 				8A98E6CA8C39049FB9C56BB4 /* Frameworks */,
@@ -991,6 +1036,7 @@
 				CD7C7850263A67D100C19C84 /* AlamofireTest.app */,
 				CD7C78D1263B8CA200C19C84 /* AlamofireMovieList.app */,
 				CD7C79E7263BE23000C19C84 /* LocalSave.app */,
+				CD7C7A39263F820600C19C84 /* SQLitePhoneBook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1254,6 +1300,41 @@
 				CD7C7A17263BE5EE00C19C84 /* InputViewController.swift */,
 			);
 			path = LocalSave;
+			sourceTree = "<group>";
+		};
+		CD7C7A3A263F820600C19C84 /* SQLitePhoneBook */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7A89263F85DF00C19C84 /* fmdb */,
+				CD7C7A3B263F820600C19C84 /* AppDelegate.swift */,
+				CD7C7A3D263F820600C19C84 /* SceneDelegate.swift */,
+				CD7C7A41263F820600C19C84 /* Main.storyboard */,
+				CD7C7A44263F821D00C19C84 /* Assets.xcassets */,
+				CD7C7A46263F821D00C19C84 /* LaunchScreen.storyboard */,
+				CD7C7A49263F821D00C19C84 /* Info.plist */,
+				CD7C7AD5263F8B5500C19C84 /* PhoneBookListVC.swift */,
+				CD7C7B11263F9D1000C19C84 /* PhoneBookDAO.swift */,
+			);
+			path = SQLitePhoneBook;
+			sourceTree = "<group>";
+		};
+		CD7C7A89263F85DF00C19C84 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				CD7C7A8C263F86A800C19C84 /* FMDatabase.h */,
+				CD7C7A8E263F86A800C19C84 /* FMDatabase.m */,
+				CD7C7A94263F86A900C19C84 /* FMDatabaseAdditions.h */,
+				CD7C7A95263F86A900C19C84 /* FMDatabaseAdditions.m */,
+				CD7C7A8D263F86A800C19C84 /* FMDatabasePool.h */,
+				CD7C7A91263F86A900C19C84 /* FMDatabasePool.m */,
+				CD7C7A8F263F86A800C19C84 /* FMDatabaseQueue.h */,
+				CD7C7A92263F86A900C19C84 /* FMDatabaseQueue.m */,
+				CD7C7A8B263F86A800C19C84 /* FMDB.h */,
+				CD7C7A93263F86A900C19C84 /* FMResultSet.h */,
+				CD7C7A90263F86A900C19C84 /* FMResultSet.m */,
+				CD7C7A8A263F86A700C19C84 /* SQLitePhoneBook-Bridging-Header.h */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1766,6 +1847,23 @@
 			productReference = CD7C79E7263BE23000C19C84 /* LocalSave.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CD7C7A38263F820600C19C84 /* SQLitePhoneBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD7C7A4A263F821D00C19C84 /* Build configuration list for PBXNativeTarget "SQLitePhoneBook" */;
+			buildPhases = (
+				CD7C7A35263F820600C19C84 /* Sources */,
+				CD7C7A36263F820600C19C84 /* Frameworks */,
+				CD7C7A37263F820600C19C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLitePhoneBook;
+			productName = SQLitePhoneBook;
+			productReference = CD7C7A39263F820600C19C84 /* SQLitePhoneBook.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1862,6 +1960,10 @@
 					CD7C79E6263BE23000C19C84 = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					CD7C7A38263F820600C19C84 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
 				};
 			};
 			buildConfigurationList = C4B68694262FAF3D00EBFA47 /* Build configuration list for PBXProject "iOSProject" */;
@@ -1905,6 +2007,7 @@
 				CD7C784F263A67D000C19C84 /* AlamofireTest */,
 				CD7C78D0263B8CA200C19C84 /* AlamofireMovieList */,
 				CD7C79E6263BE23000C19C84 /* LocalSave */,
+				CD7C7A38263F820600C19C84 /* SQLitePhoneBook */,
 			);
 		};
 /* End PBXProject section */
@@ -2172,6 +2275,16 @@
 				CD7C79F6263BE24A00C19C84 /* LaunchScreen.storyboard in Resources */,
 				CD7C79F3263BE24A00C19C84 /* Assets.xcassets in Resources */,
 				CD7C79F1263BE23000C19C84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7C7A37263F820600C19C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7C7A48263F821D00C19C84 /* LaunchScreen.storyboard in Resources */,
+				CD7C7A45263F821D00C19C84 /* Assets.xcassets in Resources */,
+				CD7C7A43263F820600C19C84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3095,6 +3208,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD7C7A35263F820600C19C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7C7A98263F86A900C19C84 /* FMDatabasePool.m in Sources */,
+				CD7C7A3C263F820600C19C84 /* AppDelegate.swift in Sources */,
+				CD7C7AD6263F8B5500C19C84 /* PhoneBookListVC.swift in Sources */,
+				CD7C7A99263F86A900C19C84 /* FMDatabaseQueue.m in Sources */,
+				CD7C7B12263F9D1000C19C84 /* PhoneBookDAO.swift in Sources */,
+				CD7C7A3E263F820600C19C84 /* SceneDelegate.swift in Sources */,
+				CD7C7A96263F86A900C19C84 /* FMDatabase.m in Sources */,
+				CD7C7A97263F86A900C19C84 /* FMResultSet.m in Sources */,
+				CD7C7A9A263F86A900C19C84 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -3475,6 +3604,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				CD7C79F5263BE24A00C19C84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CD7C7A41263F820600C19C84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7C7A42263F820600C19C84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD7C7A46263F821D00C19C84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD7C7A47263F821D00C19C84 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -4681,6 +4826,47 @@
 			};
 			name = Release;
 		};
+		CD7C7A4B263F821D00C19C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SQLitePhoneBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = taehuikim0430.gmail.SQLitePhoneBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLitePhoneBook/fmdb/SQLitePhoneBook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD7C7A4C263F821D00C19C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SQLitePhoneBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = taehuikim0430.gmail.SQLitePhoneBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLitePhoneBook/fmdb/SQLitePhoneBook-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4941,6 +5127,15 @@
 			buildConfigurations = (
 				CD7C79F9263BE24B00C19C84 /* Debug */,
 				CD7C79FA263BE24B00C19C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD7C7A4A263F821D00C19C84 /* Build configuration list for PBXNativeTarget "SQLitePhoneBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7C7A4B263F821D00C19C84 /* Debug */,
+				CD7C7A4C263F821D00C19C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
