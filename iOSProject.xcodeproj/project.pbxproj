@@ -208,6 +208,7 @@
 		CD7C7B63263FD27100C19C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7C7B61263FD27100C19C84 /* LaunchScreen.storyboard */; };
 		CD7C7BA5263FD99D00C19C84 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7BA4263FD99D00C19C84 /* ToDoListVC.swift */; };
 		CD7C7BC5263FE84400C19C84 /* ToDoInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7BC4263FE84400C19C84 /* ToDoInputVC.swift */; };
+		CD7C7BE52640FE4F00C19C84 /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C7BE42640FE4F00C19C84 /* LogVC.swift */; };
 		D35F18C7E1C1F9A23DFFA433 /* Pods_EditTableview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C598FA0DA2076ADA30A687 /* Pods_EditTableview.framework */; };
 		DEC7EF2AFDF8AF034E5CC34A /* Pods_UserDefineCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89030C760B93656945B30979 /* Pods_UserDefineCell.framework */; };
 		E59ACBA5C9060A8D80735E40 /* Pods_XMLParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3642EAFA0AD5A2B23E3D7580 /* Pods_XMLParsing.framework */; };
@@ -544,6 +545,7 @@
 		CD7C7B64263FD27100C19C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7C7BA4263FD99D00C19C84 /* ToDoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
 		CD7C7BC4263FE84400C19C84 /* ToDoInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoInputVC.swift; sourceTree = "<group>"; };
+		CD7C7BE42640FE4F00C19C84 /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
 		CDD47EC4671E0FCCFD050DA9 /* Pods-gesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gesture.debug.xcconfig"; path = "Target Support Files/Pods-gesture/Pods-gesture.debug.xcconfig"; sourceTree = "<group>"; };
 		D359ABDA1A9C7ED2834E3F09 /* Pods_BasicTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D531C7F1ED1B6E0EB239ED /* Pods_notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1376,6 +1378,7 @@
 				CD7C7B5C263FD25400C19C84 /* CoreDataToDo.xcdatamodeld */,
 				CD7C7BA4263FD99D00C19C84 /* ToDoListVC.swift */,
 				CD7C7BC4263FE84400C19C84 /* ToDoInputVC.swift */,
+				CD7C7BE42640FE4F00C19C84 /* LogVC.swift */,
 			);
 			path = CoreDataToDo;
 			sourceTree = "<group>";
@@ -3303,6 +3306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD7C7B54263FD25400C19C84 /* AppDelegate.swift in Sources */,
+				CD7C7BE52640FE4F00C19C84 /* LogVC.swift in Sources */,
 				CD7C7BC5263FE84400C19C84 /* ToDoInputVC.swift in Sources */,
 				CD7C7B5E263FD25400C19C84 /* CoreDataToDo.xcdatamodeld in Sources */,
 				CD7C7BA5263FD99D00C19C84 /* ToDoListVC.swift in Sources */,

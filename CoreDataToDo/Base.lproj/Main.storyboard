@@ -56,11 +56,41 @@
                     </navigationItem>
                     <connections>
                         <segue destination="APe-1s-Lfb" kind="push" id="MrG-re-n6p"/>
+                        <segue destination="4fQ-2E-eFw" kind="push" id="HF0-Td-R68"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiG-yE-MBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="790" y="88"/>
+        </scene>
+        <!--LogVC-->
+        <scene sceneID="nW9-xW-NYo">
+            <objects>
+                <tableViewController storyboardIdentifier="LogVC" id="4fQ-2E-eFw" customClass="LogVC" customModule="CoreDataToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5db-76-aVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogCell" id="z7r-KC-UN2">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z7r-KC-UN2" id="n72-cz-6b8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4fQ-2E-eFw" id="lQ4-Ea-hTk"/>
+                            <outlet property="delegate" destination="4fQ-2E-eFw" id="8De-Cy-hdG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Is7-q7-K3H"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpf-gD-29R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="751"/>
         </scene>
         <!--To Do InputVC-->
         <scene sceneID="XRs-Ek-ZM4">
@@ -129,7 +159,13 @@
                         <viewLayoutGuide key="safeArea" id="YUK-eA-JqG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ljg-GK-7kK"/>
+                    <navigationItem key="navigationItem" id="Ljg-GK-7kK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="IrO-Ky-kz8">
+                            <connections>
+                                <action selector="save:" destination="APe-1s-Lfb" id="eZD-dJ-Ccm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dpRuntime" destination="LBh-Sn-WTb" id="U7x-GP-5VP"/>
                         <outlet property="tfTitle" destination="7SB-0U-abB" id="Olt-x4-qSS"/>
