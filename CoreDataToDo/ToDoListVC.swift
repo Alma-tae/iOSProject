@@ -21,6 +21,16 @@ class ToDoListVC: UITableViewController {
         object.setValue(content, forKey: "content")
         object.setValue(runtime, forKey: "runtime")
         
+        //Log데이터 삽입
+        //삽입할 데이터 객체를 생성
+        let logObject = NSEntityDescription.insertNewObject(forEntityName: "Log", into: context) as! LogMO
+        //데이터를 설정
+        logObject.regdate = Date()
+        logObject.type = LogType.create.rawValue
+        
+        //1:N 관계의 데이터에 삽입
+        (object as! ToDoMO).addToLogs(logObject)
+        
         do{
             //데이터 삽입
             try context.save()
@@ -78,6 +88,13 @@ class ToDoListVC: UITableViewController {
         object.setValue(title, forKey: "title")
         object.setValue(content, forKey: "content")
         object.setValue(runtime, forKey: "runtime")
+        
+        //Log데이터 삽입
+        //삽입할 데이터 객체를 생성
+        let logObject = NSEntityDescription.insertNewObject(forEntityName: "Log", into: context) as! LogMO
+        //데이터를 설정
+        logObject.regdate = Date()
+        logObject.type = LogType.edlt.rawValue
         
         do{
             //데이터를 반영
@@ -210,6 +227,21 @@ class ToDoListVC: UITableViewController {
         
         //출력
         self.navigationController?.pushViewController(toDoInputVC, animated: true)
+    }
+    
+    //셀의 액세서리를 눌렀을 때 호출되는 메서드
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        //데이터를 찾아오기
+        let object = list[indexPath.row]
+        
+        //출력할 하뤼 뷰 컨트롤러를 생성
+        let logVC = self.storyboard?.instantiateViewController(identifier: "LogVC") as! LogVC
+        
+        //데이터 전달
+        logVC.toDo = object as? ToDoMO
+        
+        //하위뷰 컨트롤러를 네비게이션 컨트롤러를 이용해서 출력
+        self.navigationController!.pushViewController(logVC, animated: true)
     }
     
 }

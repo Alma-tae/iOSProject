@@ -29,6 +29,13 @@ extension Int16{
 }
 
 class LogVC: UITableViewController {
+    //상위 뷰 컨트롤러에서 넘겨받을 데이터
+    var toDo:ToDoMO!
+    
+    //테이블 뷰에 출력할 데이터
+    lazy var list:[LogMO]! = {
+        return self.toDo.logs?.allObjects as! [LogMO]
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,68 +50,29 @@ class LogVC: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return list.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "LogCell")
+        if cell == nil{
+            cell = UITableViewCell(style: .default, reuseIdentifier: "LogCell")
+        }
 
-        // Configure the cell...
-
-        return cell
+        //행 번호에 해당하는 데이터 찾아오기
+        let log = list[indexPath.row]
+        
+        //출력
+        cell?.textLabel?.text = "\(log.regdate!)에 \(log.type.toLogType()) 했습니다."
+        
+        return cell!
     }
-    */
+    
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
